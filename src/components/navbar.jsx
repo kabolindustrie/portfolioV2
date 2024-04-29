@@ -4,7 +4,7 @@ import { v4 as uuid4 } from "uuid";
 import { useState } from "react";
 import Image from "next/image";
 import NavLink from "./navLink";
-import { motion, stagger } from "framer-motion";
+import { motion} from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
