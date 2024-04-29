@@ -3,6 +3,7 @@ import Link from "next/link";
 import { v4 as uuid4 } from "uuid";
 import { useState } from "react";
 import Image from 'next/image';
+import NavLink from "./navLink";
 
 const links = [
   { url: "/", title: "Home" },
@@ -15,17 +16,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+    <div className="h-full flex items-center justify-between px-4 text-xl sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <Link key={uuid4()} href={link.url}>
+          <NavLink key={uuid4()} link={link}>
             {link.title}
-          </Link>
+          </NavLink>
         ))}
       </div>
       {/* LOGO */}
-      <div className="md:hidden lg:flex justify-center w-1/3">
+      <div className="md:hidden lg:flex xl:justify-center xl:w-1/3">
         <Link
           href="/"
           className="text-sm font-semibold bg-black rounded-md p-1 flex items-center justify-center"
