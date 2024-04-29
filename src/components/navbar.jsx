@@ -2,8 +2,9 @@
 import Link from "next/link";
 import { v4 as uuid4 } from "uuid";
 import { useState } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import NavLink from "./navLink";
+import { motion, stagger } from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
@@ -14,6 +15,55 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const topVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+  const centerVariants = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+  const botVariants = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+  const listVariants = {
+    closed: {
+      x: "100vh",
+    },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      }
+    },
+  };
+  const listItemVariants = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    opened: {
+      x: 0,
+      opacity: 1,
+    },
+  }
 
   return (
     <div className="h-full flex items-center justify-between px-4 text-xl sm:px-8 md:px-12 lg:px-20 xl:px-48">
@@ -38,15 +88,20 @@ const Navbar = () => {
         </Link>
       </div>
       {/* SOCIAL LINKS */}
-      <div className='hidden md:flex gap-4 w-1/3'>
+      <div className="hidden md:flex gap-4 w-1/3">
         <Link href="https://github.com/kabolindustrie">
-        <Image src="/github.png" alt="GithubLogo" width={24} height={24}/>
+          <Image src="/github.png" alt="GithubLogo" width={24} height={24} />
         </Link>
         <Link href="https://www.linkedin.com/in/amine-kabol-b2a92b24a/">
-        <Image src="/linkedin.png" alt="LinkedinLogo" width={24} height={24}/>
+          <Image
+            src="/linkedin.png"
+            alt="LinkedinLogo"
+            width={24}
+            height={24}
+          />
         </Link>
         <Link href="https://github.com/kabolindustrie">
-        <Image src="/instagram.png" alt="InstaLogo" width={24} height={24}/>
+          <Image src="/instagram.png" alt="InstaLogo" width={24} height={24} />
         </Link>
       </div>
       {/* RESPONSIVE MENU */}
@@ -56,19 +111,38 @@ const Navbar = () => {
           className="relative w-10 h-8 flex flex-col justify-between z-50"
           onClick={() => setOpen(!open)}
         >
-          <div className="w-10 h-1 bg-black rounded"></div>
-          <div className="w-10 h-1 bg-black rounded"></div>
-          <div className="w-10 h-1 bg-black rounded"></div>
+          <motion.div
+            variants={topVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
+          <motion.div
+            variants={centerVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded"
+          ></motion.div>
+          <motion.div
+            variants={botVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
         </button>
         {/* MENU LIST */}
         {open && (
-          <div className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white">
+          <motion.div
+            variants={listVariants}
+            initial="closed"
+            animate="opened"
+            className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white z-40"
+          >
             {links.map((link) => (
-              <Link key={uuid4()} href={link.url}>
-                {link.title}
-              </Link>
+              <motion.div key={uuid4()}
+              variants={listItemVariants}
+              >
+                <Link href={link.url}>{link.title}</Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
