@@ -13,7 +13,7 @@ const Homepage = () => {
         {/* IMAGE CONTAINER */}
         <div className="h-1/2 relative lg:h-full lg:w-1/2">
           <Image
-            src="/hero.png"
+            src="/hero2.png"
             alt="Hero Image"
             className="object-contain"
             fill
@@ -23,7 +23,7 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <div className="h-1/2 flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2">
           {/* TITLE */}
-          <h1 className="text-4xl font-bold md:text-6xl">Front End Dev</h1>
+          <h1 className="w-full text-4xl font-bold md:text-6xl">Front End Dev</h1>
           {/* DESC */}
           <p className="md:text-5xl">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
