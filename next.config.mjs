@@ -1,12 +1,17 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.module.rules.push({
-        test: /\.(pdf)$/,
-        type: 'asset/resource',
-      });
-    }
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(pdf)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next/static/files/',
+          outputPath: 'static/files/',
+        },
+      },
+    });
 
     return config;
   },

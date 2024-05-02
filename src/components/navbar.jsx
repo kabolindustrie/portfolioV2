@@ -8,7 +8,7 @@ import { motion} from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
+  { url: "/about", title: "About/skill" },
   { url: "/contact", title: "Contact" },
   { url: "/portfolio", title: "Portfolio" },
 ];
@@ -89,10 +89,14 @@ const Navbar = () => {
       </div>
       {/* SOCIAL LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="https://github.com/kabolindustrie">
+        <Link
+        target="_blank" rel="noopener noreferrer"
+        href="https://github.com/kabolindustrie">
           <Image src="/github.png" alt="GithubLogo" width={24} height={24} />
         </Link>
-        <Link href="https://www.linkedin.com/in/amine-kabol-b2a92b24a/">
+        <Link
+        target="_blank" rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/amine-kabol-b2a92b24a/">
           <Image
             src="/linkedin.png"
             alt="LinkedinLogo"
@@ -100,7 +104,9 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="https://github.com/kabolindustrie">
+        <Link
+        target="_blank" rel="noopener noreferrer"
+        href="https://instagram.com/amin_barbebrune">
           <Image src="/instagram.png" alt="InstaLogo" width={24} height={24} />
         </Link>
       </div>

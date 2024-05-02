@@ -103,7 +103,10 @@ const PortfolioPage = () => {
                   <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  <Link className="flex justify-end" href={item.link}>
+                  <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-end" href={item.link}>
                     <button className="p-2 rounded-lg ring-1 ring-black bg-black text-white m-4 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg hover:bg-white hover:text-black font-semibold">
                       See demo
                     </button>
