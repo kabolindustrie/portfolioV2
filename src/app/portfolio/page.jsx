@@ -1,7 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-// import { uuid4 } from "uuid";
 import Image from "next/image";
 import Link from "next/link";
 import Mockup1 from "../../../public/Boxymockup.png";

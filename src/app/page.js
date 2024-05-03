@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import CV from "../../public/CV_AmineK_frontend.pdf"
+import CV from "../../public/CV_AmineK_frontend.pdf";
 import Link from "next/link";
 
 const Homepage = () => {

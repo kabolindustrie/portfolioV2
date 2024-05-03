@@ -1,7 +1,6 @@
 "use client";
 import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 
 const AboutPage = () => {
@@ -52,15 +51,15 @@ const AboutPage = () => {
             </p>
             <p className="text-lg">
               Je suis Amine KABOL, un ancien Directeur de Secteur passionné par
-              le social et en plein virage vers l'univers technologique grâce au
-              bootcamp Lewagon. À 32 ans, mon parcours témoigne d'une transition
-              audacieuse du social à la haute technologie. Fort d'une décennie
-              d'expérience dans le social, j'ai acquis une compréhension
+              le social et en plein virage vers l&lsquo;univers technologique grâce au
+              bootcamp Lewagon. À 32 ans, mon parcours témoigne d&lsquo;une transition
+              audacieuse du social à la haute technologie. Fort d&lsquo;une décennie
+              d&lsquo;expérience dans le social, j&lsquo;ai acquis une compréhension
               profonde des besoins humains et une capacité éprouvée à innover.
               Rejoignez-moi dans cette aventure passionnante, où chaque jour est
-              une nouvelle opportunité de créer, d'innover et de faire une
+              une nouvelle opportunité de créer, d&lsquo;innover et de faire une
               différence. Je suis Amine KABOL, et je suis prêt à relever le défi
-              avec vous.
+              avec vous.&lsquo;
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -278,7 +277,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                  Childhood Sector Director: Leads and coordinates services to ensure children's well-being and development in a safe environment.{" "}
+                  Childhood Sector Director: Leads and coordinates services to ensure children&lsquo;s well-being and development in a safe environment.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
