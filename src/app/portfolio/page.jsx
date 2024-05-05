@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+// import { uuid4 } from "uuid";
 import Image from "next/image";
 import Link from "next/link";
 import Mockup1 from "../../../public/Boxymockup.png";
@@ -92,21 +93,18 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-5 text-black">
+                <div className="flex flex-col gap-5 text-black m-8">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-4xl xl:text-5xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-100 h-100 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                  <div className="relative w-96 h-96 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px]">
                     <Image src={item.img} alt="" fill />
                   </div>
-                  <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80 md:w-96  hidden md:block lg:w-[500px] lg:text-lg">
                     {item.desc}
                   </p>
-                  <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-end" href={item.link}>
-                    <button className="p-2 rounded-lg ring-1 ring-black bg-black text-white m-4 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg hover:bg-white hover:text-black font-semibold">
+                  <Link className="flex justify-end" href={item.link}>
+                    <button className="p-2 rounded-lg ring-1 ring-black bg-black text-white m-4 text-sm md:p-4 md:text-md lg:text-lg hover:bg-white hover:text-black font-semibold">
                       See demo
                     </button>
                   </Link>

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { v4 as uuid4 } from "uuid";
 import { useState } from "react";
 import Image from "next/image";
 import NavLink from "./navLink";
@@ -8,7 +7,7 @@ import { motion} from "framer-motion";
 
 const links = [
   { url: "/", title: "Home" },
-  { url: "/about", title: "About/skill" },
+  { url: "/about", title: "About" },
   { url: "/contact", title: "Contact" },
   { url: "/portfolio", title: "Portfolio" },
 ];
@@ -70,7 +69,7 @@ const Navbar = () => {
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <NavLink key={uuid4()} link={link}>
+          <NavLink key={link.title} link={link}>
             {link.title}
           </NavLink>
         ))}
@@ -139,10 +138,10 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white z-40"
+            className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white z-50"
           >
             {links.map((link) => (
-              <motion.div key={uuid4()}
+              <motion.div key={link.title}
               variants={listItemVariants}
               >
                 <Link href={link.url}>{link.title}</Link>

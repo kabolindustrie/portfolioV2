@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import CV from "../../public/CV_AmineK_frontend.pdf";
+import CV from "../../public/CV_AmineK_frontend.pdf"
 import Link from "next/link";
 
 const Homepage = () => {
@@ -12,9 +12,9 @@ const Homepage = () => {
       transition={{ duration: 1 }}
       className="h-full"
     >
-      <div className="h-full flex flex-col px-4 text-xl lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full flex flex-col px-4 gap-8 text-xl lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 relative lg:h-full lg:w-1/2">
+        <div className="h-1/2 mb-8 relative lg:h-full lg:w-1/2">
           <Image
             src="/hero4.png"
             alt="Hero Image"
@@ -24,9 +24,9 @@ const Homepage = () => {
           {/* width={616} height={768} */}
         </div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2">
+        <div className="h-1/2 flex flex-col gap-4 items-center justify-center lg:h-full lg:w-1/2">
           {/* TITLE */}
-          <h1 className="w-full text-4xl font-bold md:text-6xl">
+          <h1 className="w-full text-3xl font-bold md:text-6xl">
             Front-end Developer
           </h1>
           {/* DESC */}
@@ -43,16 +43,16 @@ const Homepage = () => {
           <div className="flex w-full gap-4">
             <Link href="/portfolio">
               <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-                View my work
+                Project
               </button>
             </Link>
             <Link href="/contact">
               <button className="p-4 rounded-lg ring-1 ring-black">
-                Contact me
+                Contact
               </button>
             </Link>
             <Link download href={CV}>
-              <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+              <button className="p-4 mb-4 rounded-lg ring-1 ring-black bg-black text-white">
                 CV/Resume
               </button>
             </Link>
