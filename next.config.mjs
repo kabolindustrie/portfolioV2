@@ -1,7 +1,7 @@
 // next.config.mjs
 
 const nextConfig = {
-  output:"export",
+  output: 'export',
   images: {
     loader: "custom",
     loaderFile: "./loader.js",

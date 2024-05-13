@@ -138,7 +138,7 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white z-50"
+            className="absolute top-0 left-0 h-screen w-screen flex flex-col items-center justify-center gap-8 text-4xl bg-black text-white z-40"
           >
             {links.map((link) => (
               <motion.div key={link.title}
