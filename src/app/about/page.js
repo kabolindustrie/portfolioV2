@@ -38,7 +38,7 @@ const AboutPage = () => {
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg">
+            {/* <p className="text-lg">
               I am Amine KABOL, a former Sector Director passionate about social
               issues and currently transitioning into the technological realm
               through the Lewagon bootcamp. At 32, my journey reflects a bold
@@ -48,11 +48,11 @@ const AboutPage = () => {
               Join me in this exciting adventure, where each day brings a new
               opportunity to create, innovate, and make a difference. I am Amine
               KABOL, and I am ready to take on this challenge with you.
-            </p>
+            </p> */}
             <p className="text-lg">
-              Je suis Amine KABOL, un ancien Directeur de Secteur passionné par
+              Je suis <strong>KABOL Amine</strong>, un ancien Directeur de Secteur passionné par
               le social et en plein virage vers l&lsquo;univers technologique grâce au
-              bootcamp Lewagon. À 32 ans, mon parcours témoigne d&lsquo;une transition
+              <strong> bootcamp Lewagon</strong>. À 32 ans, mon parcours témoigne d&lsquo;une transition
               audacieuse du social à la haute technologie. Fort d&lsquo;une décennie
               d&lsquo;expérience dans le social, j&lsquo;ai acquis une compréhension
               profonde des besoins humains et une capacité éprouvée à innover.
@@ -62,9 +62,9 @@ const AboutPage = () => {
               avec vous.&lsquo;
             </p>
             {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
+            {/* <span className="italic">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            </span> */}
             {/* BIOGRAPHY SIGN SVG*/}
             {/* <div className="self-end">
               <svg
@@ -208,12 +208,12 @@ const AboutPage = () => {
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-white p-3 text-sm md:text-lg font-semibold rounded-b-lg rounded-s-lg">
                   Déveloper - JavaScript React
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                  OpenClassrooms React course: Learn React from components to routing, creating dynamic, high-performance web interfaces.{" "}
+                  <div className="p-3 text-sm italic hidden sm:block">
+                  Cours React d&lsquo;OpenClassrooms : Apprenez React depuis les composants jusqu&lsquo;au routage, en créant des interfaces web dynamiques et performantes.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
@@ -250,12 +250,12 @@ const AboutPage = () => {
                 {/* RIGHT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-white p-3 text-sm md:text-lg font-semibold rounded-b-lg rounded-s-lg">
                     Junior Full-Stack Dev
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                  LeWagon Fullstack course: Intensive hands-on training covering both front-end and back-end development for versatile coding skills.{" "}
+                  <div className="p-3 text-sm italic hidden sm:block">
+                  Cours Fullstack du Wagon : Formation intensive et pratique couvrant à la fois le développement front-end et back-end pour acquérir des compétences en codage polyvalentes.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
@@ -272,16 +272,20 @@ const AboutPage = () => {
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                  Director of childhood sector {" "}
+                  <div className="bg-white p-3 text-sm md:text-lg font-semibold rounded-b-lg rounded-s-lg">
+                  Directeur de secteur enfantce {" "}
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                  Childhood Sector Director: Leads and coordinates services to ensure children&lsquo;s well-being and development in a safe environment.{" "}
+                  <div className="p-3 text-sm italic hidden sm:block">
+                  Directeur de Secteur enfance : Dirige et coordonne les services pour garantir le bien-être et le développement des enfants dans un environnement sûr.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
                     2017 - 2023{" "}
+                  </div>
+                                    {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    Marie d&lsquo;Evry
                   </div>
                 </div>
                 {/* CENTER */}

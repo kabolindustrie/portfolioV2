@@ -30,10 +30,10 @@ const Homepage = () => {
             Front-end Developer
           </h1>
           {/* DESC */}
-          <p className="md:text-2xl">
+          {/* <p className="md:text-2xl">
             Cultivate an understanding of my work in web development. Explore my
             projects and skills. Are you ready to collaborate?
-          </p>
+          </p> */}
           <p className="md:text-2xl">
             {" "}
             Cultivez une vision de mon travail en développement web. Explorez
@@ -53,7 +53,7 @@ const Homepage = () => {
             </Link>
             <Link download href={CV}>
               <button className="p-4 mb-4 rounded-lg ring-1 ring-black bg-black text-white">
-                CV/Resume
+                CV 
               </button>
             </Link>
           </div>

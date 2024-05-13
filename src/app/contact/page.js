@@ -42,7 +42,7 @@ const ContactPage = () => {
     >
       <div className="h-full flex flex-col lg:flex-row lg:items-center px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className="h-1/4 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/4 lg:h-full lg:w-1/2 lg:text-6xl flex items-center justify-center text-4xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -65,7 +65,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-3/4 lg:h-[calc(70%+2rem)] lg:w-1/2 bg-blue-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-3/4 lg:h-[calc(70%+2rem)] lg:w-1/2 bg-blue-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-12"
         >
           <span>Mail :</span>
           <input
@@ -79,7 +79,7 @@ const ContactPage = () => {
             className="bg-red-100 border-b-2 outline-none resize-none"
             name="user_message"
           />
-          <button className="p-4 rounded-lg ring-1 ring-black hover:bg-black hover:text-white bg-white text-black">
+          <button className="p-2 rounded-lg ring-1 ring-black hover:bg-black hover:text-white bg-white text-black">
             Send
           </button>
           {success && (
